@@ -22,7 +22,7 @@ print("download:", url, file=sys.stderr)
 os.system("wget -O MNIST.tar.gz {}".format(url))
 os.system("tar -zxvf MNIST.tar.gz")
 
-wandb.login(api_key=os.getenv('WANDB_API_KEY'))
+wandb.login(key=os.getenv('WANDB_API_KEY'))
 
 class Net(nn.Module):
     def __init__(self):
