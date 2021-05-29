@@ -20,7 +20,7 @@ else:
 print("download:", url, file=sys.stderr)
 
 os.system("wget -O MNIST.tar.gz {}".format(url))
-os.system("tar -zxvf MNIST.tar.gz")
+os.system("tar -zxf MNIST.tar.gz")
 
 wandb.login(key=os.getenv('WANDB_API_KEY'))
 
