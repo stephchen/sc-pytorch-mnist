@@ -19,8 +19,9 @@ else:
     url = "https://activeeon-public.s3.eu-west-2.amazonaws.com/datasets/MNIST.new.tar.gz"
 print("download:", url, file=sys.stderr)
 
-os.system("wget -O MNIST.tar.gz {}".format(url))
-os.system("tar -zxf MNIST.tar.gz")
+if not os.path.exists("/Users/stephchen/go/src/github.com/wandb/sc-pytorch-mnist/MNIST"):
+    os.system("wget -O /Users/stephchen/go/src/github.com/wandb/sc-pytorch-mnist/MNIST.tar.gz {}".format(url))
+    os.system("tar -zxf /Users/stephchen/go/src/github.com/wandb/sc-pytorch-mnist/MNIST.tar.gz")
 
 wandb.login(key=os.getenv('WANDB_API_KEY'))
 
