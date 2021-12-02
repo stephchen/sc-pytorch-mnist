@@ -3,7 +3,11 @@ import os
 import time
 
 
+print('@@@@@@@@@@@@@@@@@@@@@@@')
+
 wandb.init()
+
+print('@@@@@@@@@ init')
 print('launch test!')
 
 print('sleeping.......')
