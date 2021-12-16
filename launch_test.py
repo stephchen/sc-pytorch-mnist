@@ -9,3 +9,6 @@ print('launch test!')
 print('sleeping.......')
 time.sleep(5)
 print('awake!')
+
+import platform
+print('@@@@@@', platform.system(), platform.release())
