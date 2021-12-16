@@ -11,4 +11,4 @@ time.sleep(5)
 print('awake!')
 
 import platform
-print('@@@@@@', platform.system(), platform.release())
+print('@@@@@@', platform.system(), platform.release(), platform.linux_distribution())
